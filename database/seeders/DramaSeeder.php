@@ -16,12 +16,20 @@ class DramaSeeder extends Seeder
     {
         
         //ダミーデータ
+        // Drama::create([
+        //     'title' => '花より男子',
+        //     'country' => '日本',
+        //     'user_id' => 1,
+        //     'body' => '王道の学園ドラマ',
+        //     'image_path' => 'storage/drama/スクリーンショット 2025-06-10 0.31.47.png',
+        // ]);
+
         Drama::create([
-            'title' => '花より男子',
-            'country' => '日本',
-            'user_id' => 'y-u',
-            'body' => '王道の学園ドラマ',
-            'image_path' => 'storage/drama/スクリーンショット 2025-06-10 0.31.47.png',
+            'title' => '梨泰院クラス',
+            'country' => '韓国',
+            'user_id' => 2,
+            'body' => '韓国の人気ドラマ',
+            'image_path' => 'https://picsum.photos/id/173/100',
         ]);
     }
 }
