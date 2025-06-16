@@ -11,8 +11,8 @@ class DramaController extends Controller
     public function index()
     {
         // return Drama::all();
-        $dramas = Drama::with('user')->latest()->get();
-        return view('drama', compact('dramas'));
+        $dramas = Drama::all();
+        return view('drama', ['dramas' => $dramas]);
     }
 
     // データ保存
@@ -27,6 +27,21 @@ class DramaController extends Controller
         ]);
 
         Drama::create($validate);
+
+        return redirect('/drama');
+    }
+
+    public function create()
+    {
+        return view('create');
+    }
+
+    public function destroy($id)
+    {
+        // Dramaテーブルから特定のデータ取得
+        $dramas = Drama::find($id);
+        // 取得したデータの削除
+        $dramas->delete();
 
         return redirect('/drama');
     }
