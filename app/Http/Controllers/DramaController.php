@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Drama;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DramaController extends Controller
 {
@@ -21,14 +22,19 @@ class DramaController extends Controller
         $validate = $request->validate([
             'title' => 'required|string|max:255',
             'country' => 'required|string|max:255',
-            'user_id',
             'body' => 'nullable|string',
             'image_path' => 'nullable|string'
         ]);
 
-        Drama::create($validate);
+        Drama::create([
+            'title' => $validate['title'],
+            'country' => $validate['country'],
+            'body' => $validate['body'] ?? null,
+            'image_path' => $validate['image_path'] ?? null,
+            'user_id' => Auth::id(),
+        ]);
 
-        return redirect('/drama');
+        return redirect('/drama')->with('message', '投稿しました');
     }
 
     public function create()
