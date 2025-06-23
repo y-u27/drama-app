@@ -12,7 +12,7 @@
   <h1 class="font-bold text-xl mb-2 pl-3 pt-3">Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="px-130">
-    <form action="" method="POST">
+    <form action="{{ route('drama.store') }}" method="POST">
       @csrf
       <select name="country" class="py-5">
         <option value="Japan">Japan</option>
@@ -23,14 +23,14 @@
       </select>
       <br>
       <div>
-        <input type="text" class="border rounded" placeholder="タイトルを入力">
+        <input type="text" name="title" class="border rounded" placeholder="タイトルを入力">
       </div>
       <br>
-      <textarea name="" id="" class="border w-100 h-80 rounded" placeholder="感想を入力"></textarea>
+      <textarea name="body" id="" class="border w-100 h-80 rounded" placeholder="感想を入力"></textarea>
+      <div class="px-70 py-3">
+        <button type="submit" class="bg-lime-200 w-30 h-15 px-10 py-2 rounded hover:bg-yellow-200">投稿</button>
+      </div>
     </form>
-    <div class="px-75">
-      <button class="bg-lime-200 h-10 px-10 py-2 rounded hover:bg-yellow-200">投稿</button>
-    </div>
   </div>
 </body>
 
