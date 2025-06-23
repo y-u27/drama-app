@@ -19,10 +19,7 @@
       <li><a href="">America</a></li>
       <li><a href="">Other</a></li>
     </ul>
-    <form action="{{ route('drama.create') }}" method="POST">
-      @csrf
-      <button type="submit" class="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-600">＋投稿</button>
-    </form>
+    <a href="{{ route('drama.create') }}" class="bg-lime-200 px-4 py-2 rounded hover:bg-yellow-200">＋投稿</a>
   </div>
   <div class="flex flex-row p-2 gap-8 justify-center">
     @foreach ($dramas as $drama )
