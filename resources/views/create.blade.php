@@ -21,14 +21,18 @@
         <option value="America">America</option>
         <option value="Other">Other</option>
       </select>
-      <br>
       <div>
-        <input type="text" name="title" class="border rounded" placeholder="タイトルを入力">
+        <input type="text" name="title" class="mb-4 border rounded" placeholder="タイトルを入力">
       </div>
-      <br>
-      <textarea name="body" id="" class="border w-100 h-80 rounded" placeholder="感想を入力"></textarea>
+      <textarea name="body" id="" class="mb-4 border w-100 h-50 rounded" placeholder="感想を入力"></textarea>
+      <div>
+        <input type="file" name="image" class="mb-4 w-100 h-30 border rounded">
+      </div>
       <div class="px-70 py-3">
         <button type="submit" class="bg-lime-200 w-30 h-15 px-10 py-2 rounded hover:bg-yellow-200">投稿</button>
+      </div>
+      <div class="px-10">
+        <button type="button" onclick="history.back()">戻る</button>
       </div>
     </form>
   </div>
