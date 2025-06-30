@@ -23,14 +23,19 @@ class DramaController extends Controller
             'title' => 'required|string|max:255',
             'country' => 'required|string|max:255',
             'body' => 'nullable|string',
-            'image_path' => 'nullable|string'
+            'image' => 'nullable|image|max:2048'
         ]);
+
+        $path = null;
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('drama', 'public');
+        }
 
         Drama::create([
             'title' => $validate['title'],
             'country' => $validate['country'],
             'body' => $validate['body'] ?? null,
-            'image_path' => $validate['image_path'] ?? null,
+            'image_path' => $path,
             'user_id' => Auth::id(),
         ]);
 
