@@ -12,7 +12,7 @@
   <h1 class="font-bold text-xl mb-2 pl-3 pt-3">Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="px-130">
-    <form action="{{ route('drama.store') }}" method="POST">
+    <form action="{{ route('drama.store') }}" method="POST" enctype="multipart/form-data">
       @csrf
       <select name="country" class="py-5">
         <option value="Japan">Japan</option>
