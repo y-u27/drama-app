@@ -47,6 +47,11 @@ class DramaController extends Controller
         return view('create');
     }
 
+    public function edit($id) {
+        $drama = Drama::find($id);
+        return view('edit', ['drama' => $drama]);
+    }
+
     public function destroy($id)
     {
         // Dramaテーブルから特定のデータ取得
