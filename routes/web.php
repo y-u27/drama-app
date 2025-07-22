@@ -12,5 +12,10 @@ Route::get('/drama/create', [DramaController::class, 'create'])->name('drama.cre
 // 投稿内容保存
 Route::post('/drama', [DramaController::class, 'store'])->name('drama.store');
 
+// 投稿編集
+Route::get('/drama/{id}/edit', [DramaController::class, 'edit'])->name('drama.edit');
+
+Route::put('/drama/{id}', [DramaController::class, 'update'])->name('drama.update');
+
 // 投稿削除
 Route::delete('/drama/{id}', [DramaController::class, 'destroy'])->name('drama.destroy');
