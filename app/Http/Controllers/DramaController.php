@@ -25,12 +25,12 @@ class DramaController extends Controller
             'body' => 'nullable|string',
             'image' => 'nullable|image|max:2048'
         ]);
-
+        
         $path = null;
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('drama', 'public');
         }
-
+        
         Drama::create([
             'title' => $validate['title'],
             'country' => $validate['country'],
@@ -38,18 +38,43 @@ class DramaController extends Controller
             'image_path' => $path,
             'user_id' => Auth::id(),
         ]);
-
+        
         return redirect('/drama')->with('message', '投稿しました');
     }
-
+    
     public function create()
     {
         return view('create');
     }
-
+    
     public function edit($id) {
         $drama = Drama::find($id);
         return view('edit', ['drama' => $drama]);
+    }
+    
+    public function update(Request $request, $id) {
+        $drama = Drama::findOrFail($id);
+        
+        $validate = $request->validate([
+            'title' => 'required|string|max:255',
+            'country' => 'required|string|max:255',
+            'body' => 'nullable|string',
+            'image' => 'nullable|image|max:2048'
+        ]);
+
+        $path = $drama->image_path;
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('drama', 'public');
+        }
+
+        $drama->update([
+            'title' => $validate['title'],
+            'country' => $validate['country'],
+            'body' => $validate['body'] ?? null,
+            'image_path' => $path,
+        ]);
+
+        return redirect()->route('drama.index')->with('message', '編集が完了');
     }
 
     public function destroy($id)
