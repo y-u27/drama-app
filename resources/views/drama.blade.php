@@ -27,14 +27,14 @@
     <div class="w-70 h-70 bg-blue-100 rounded-lg shadow-lg overflow-hidden">
       <div class="p-6">
         <!-- 編集ボタン -->
-          <button type="submit" class="w-14 h-5 px-4 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300"><a href="{{ route('drama.edit', $drama->id ) }}">編集</a></button>
+        <button type="submit" class="w-14 h-5 px-4 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300"><a href="{{ route('drama.edit', $drama->id ) }}">編集</a></button>
         <!-- ここまで -->
         <!-- 削除ボタン -->
-          <form action="{{ route('drama.destroy', $drama->id) }}" method="POST" onsubmit="return confirm('本当に削除しますか');">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="w-14 h-5 px-4 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300">削除</button>
-          </form>
+        <form action="{{ route('drama.destroy', $drama->id) }}" method="POST" onsubmit="return confirm('本当に削除しますか');">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="w-14 h-5 px-4 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300">削除</button>
+        </form>
         <!-- ここまで -->
         <h2 class="text-lg font-bold mb-2">{{ $drama->title }} （{{ $drama->country }}）</h2>
         <p class="mb-4">{{ $drama->body }}</p>
@@ -44,6 +44,11 @@
       </div>
     </div>
     @endforeach
+  </div>
+  <div class="mt-6 flex justify-center">
+    <div class="bg-white p-4 rounded shadow">
+      {{ $dramas->links() }}
+    </div>
   </div>
 </body>
 
