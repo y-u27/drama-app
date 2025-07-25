@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  @vite('resources/css/app.css')
+  <title>編集ページ</title>
 </head>
 <body>
+  <h1 class="font-bold text-xl mb-2 pl-3 pt-3">Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="px-130">
-    <form action="{{ route('drama.update') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('drama.update', ['id' =>$drama->id]) }}" method="POST" enctype="multipart/form-data">
       @csrf
       @method("PUT")
       <select name="country" class="py-5">
