@@ -11,8 +11,10 @@ class DramaController extends Controller
     // 一覧表示
     public function index()
     {
-        // return Drama::all();
-        $dramas = Drama::all();
+        // $dramas = Drama::all();
+        // return view('drama', ['dramas' => $dramas]);
+
+        $dramas = Drama::paginate(5);
         return view('drama', ['dramas' => $dramas]);
     }
 
@@ -25,12 +27,12 @@ class DramaController extends Controller
             'body' => 'nullable|string',
             'image' => 'nullable|image|max:2048'
         ]);
-        
+
         $path = null;
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('drama', 'public');
         }
-        
+
         Drama::create([
             'title' => $validate['title'],
             'country' => $validate['country'],
@@ -38,23 +40,25 @@ class DramaController extends Controller
             'image_path' => $path,
             'user_id' => Auth::id(),
         ]);
-        
+
         return redirect('/drama')->with('message', '投稿しました');
     }
-    
+
     public function create()
     {
         return view('create');
     }
-    
-    public function edit($id) {
+
+    public function edit($id)
+    {
         $drama = Drama::find($id);
         return view('edit', ['drama' => $drama]);
     }
-    
-    public function update(Request $request, $id) {
+
+    public function update(Request $request, $id)
+    {
         $drama = Drama::findOrFail($id);
-        
+
         $validate = $request->validate([
             'title' => 'required|string|max:255',
             'country' => 'required|string|max:255',
