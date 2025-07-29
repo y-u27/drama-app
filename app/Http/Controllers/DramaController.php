@@ -81,6 +81,11 @@ class DramaController extends Controller
         return redirect()->route('drama.index')->with('message', '編集が完了');
     }
 
+    public function category($country) {
+        $dramas = Drama::where('country', $country)->paginate(5);
+        return view('drama',['dramas' => $dramas, 'category' => $country]);
+    }
+
     public function destroy($id)
     {
         // Dramaテーブルから特定のデータ取得
