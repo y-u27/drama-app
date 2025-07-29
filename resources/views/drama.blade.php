@@ -14,17 +14,17 @@
   <hr class="border-dashed">
   <div class="flex justify-between items-center px-6 pt-2">
     <ul class="flex px-3 space-x-6">
-      <li><a href="">Japan</a></li>
-      <li><a href="">Korean</a></li>
-      <li><a href="">Thailand</a></li>
-      <li><a href="">America</a></li>
-      <li><a href="">Other</a></li>
+      <li><a href="{{ route('drama.category', 'Japan') }}">Japan</a></li>
+      <li><a href="{{ route('drama.category', 'Korean') }}">Korean</a></li>
+      <li><a href="{{ route('drama.category', 'Thailand') }}">Thailand</a></li>
+      <li><a href="{{ route('drama.category', 'America') }}">America</a></li>
+      <li><a href="{{ route('drama.category', 'Other') }}">Other</a></li>
     </ul>
     <a href="{{ route('drama.create') }}" class="bg-lime-200 px-4 py-2 rounded hover:bg-yellow-200">＋投稿</a>
   </div>
-  <div class="flex flex-row p-2 gap-8 justify-center">
+  <div class="flex flex-row p-6 gap-8 justify-center">
     @foreach ($dramas as $drama )
-    <div class="w-70 h-70 bg-blue-100 rounded-lg shadow-lg overflow-hidden">
+    <div class="w-70 h-116 bg-blue-100 rounded-lg shadow-lg overflow-hidden">
       <div class="p-6">
         <!-- 編集ボタン -->
         <button type="submit" class="w-14 h-5 px-4 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300"><a href="{{ route('drama.edit', $drama->id ) }}">編集</a></button>
@@ -47,7 +47,7 @@
   </div>
   <div class="mt-6 flex justify-center">
     <div class="bg-white p-4 rounded shadow">
-      {{ $dramas->links() }}
+      {{ $dramas->links('vendor.pagination.tailwind') }}
     </div>
   </div>
 </body>
