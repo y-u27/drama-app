@@ -9,6 +9,9 @@ Route::get('/drama', [DramaController::class, 'index'])->name('drama.index');
 // 投稿ページ表示
 Route::get('/drama/create', [DramaController::class, 'create'])->name('drama.create');
 
+// カテゴリ
+Route::get('drama/category/{country}', [DramaController::class, 'category'])->name('drama.category');
+
 // 投稿内容保存
 Route::post('/drama', [DramaController::class, 'store'])->name('drama.store');
 
