@@ -9,8 +9,8 @@
   <title>Dramas Thought〜ドラマ感想掲示板〜</title>
 </head>
 
-<body>
-  <h1 class="font-bold text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i> Dramas Thought</h1>
+<body class="bg-[#e9e4d4]">
+  <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i> Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="flex justify-between items-center px-6 pt-2">
     <ul class="flex px-3 space-x-6">
@@ -20,11 +20,11 @@
       <li><a href="{{ route('drama.category', 'America') }}">America</a></li>
       <li><a href="{{ route('drama.category', 'Other') }}">Other</a></li>
     </ul>
-    <a href="{{ route('drama.create') }}" class="bg-lime-200 px-4 py-2 rounded hover:bg-yellow-200">＋投稿</a>
+    <a href="{{ route('drama.create') }}" class="px-4 py-2 rounded-lg bg-white border-4 border-sky-700">＋投稿</a>
   </div>
   <div class="flex flex-row p-6 gap-8 justify-center">
     @foreach ($dramas as $drama )
-    <div class="w-70 h-116 bg-blue-100 rounded-lg shadow-lg overflow-hidden">
+    <div class="w-70 h-116 bg-white border-4 border-sky-700 rounded-lg shadow-lg overflow-hidden">
       <div class="p-6">
         <!-- 編集ボタン -->
         <button type="submit" class="w-14 h-5 px-4 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300"><a href="{{ route('drama.edit', $drama->id ) }}">編集</a></button>
