@@ -3,13 +3,13 @@
 use App\Http\Controllers\DramaController;
 use Illuminate\Support\Facades\Route;
 
-// 投稿一覧表示
+// 投稿一覧表示/全てのカテゴリ表示
 Route::get('/drama', [DramaController::class, 'index'])->name('drama.index');
 
 // 投稿ページ表示
 Route::get('/drama/create', [DramaController::class, 'create'])->name('drama.create');
 
-// カテゴリ
+// 国ごとのカテゴリ
 Route::get('drama/category/{country}', [DramaController::class, 'category'])->name('drama.category');
 
 // 投稿内容保存
