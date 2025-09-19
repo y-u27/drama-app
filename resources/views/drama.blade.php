@@ -10,10 +10,11 @@
 </head>
 
 <body class="bg-[#e9e4d4]">
-  <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i> Dramas Thought</h1>
+  <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i>Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="flex justify-between items-center px-6 pt-2">
     <ul class="flex px-3 space-x-6">
+      <li><a href="{{ route('drama.index') }}">All</a></li>
       <li><a href="{{ route('drama.category', 'Japan') }}">Japan</a></li>
       <li><a href="{{ route('drama.category', 'Korean') }}">Korean</a></li>
       <li><a href="{{ route('drama.category', 'Thailand') }}">Thailand</a></li>
