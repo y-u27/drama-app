@@ -14,7 +14,7 @@
   <hr class="border-dashed">
   <div class="flex justify-between items-center px-6 pt-2">
     <ul class="flex px-3 space-x-6">
-      <li><a href="{{ route('drama.index') }}">All</a></li>
+      <li><a href="{{ route('drama.index') }}" class="bg-sky-500 hover:bg-sky-700">All</a></li>
       <li><a href="{{ route('drama.category', 'Japan') }}">Japan</a></li>
       <li><a href="{{ route('drama.category', 'Korean') }}">Korean</a></li>
       <li><a href="{{ route('drama.category', 'Thailand') }}">Thailand</a></li>
