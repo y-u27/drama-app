@@ -9,14 +9,14 @@
   <title>Dramas Thought〜ドラマ感想掲示板〜</title>
 </head>
 
-<body class="bg-[#e9e4d4]">
+<body class="bg-[#e9dacb]">
   <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i>Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="flex justify-between items-center px-6 pt-2">
     <ul class="flex px-3 space-x-6">
-      <li><a href="{{ route('drama.index') }}" class="bg-sky-500 hover:bg-sky-700">All</a></li>
+      <li><a href="{{ route('drama.index') }}" class="px-5 bg-sky-500 hover:bg-sky-700 rounded-lg">All</a></li>
       <li><a href="{{ route('drama.category', 'Japan') }}">Japan</a></li>
-      <li><a href="{{ route('drama.category', 'Korean') }}">Korean</a></li>
+      <li><a href="{{ route('drama.category', 'Korean') }}" class="px-5 bg-emerald-500 hover:bg-emerald-700 rounded-lg">Korean</a></li>
       <li><a href="{{ route('drama.category', 'Thailand') }}">Thailand</a></li>
       <li><a href="{{ route('drama.category', 'America') }}">America</a></li>
       <li><a href="{{ route('drama.category', 'Other') }}">Other</a></li>
