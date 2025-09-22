@@ -9,7 +9,7 @@
   <title>Dramas Thought〜ドラマ感想掲示板〜</title>
 </head>
 
-<body class="bg-gradient-to-bl from-indigo-300 via-blue-200 to-sky-200">
+<body class="bg-gradient-to-l from-indigo-300 via-blue-200 to-sky-200">
   <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i>Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="flex justify-between items-center px-6 pt-2">
@@ -48,11 +48,8 @@
     </div>
     @endforeach
   </div>
-  <div class="mt-6 flex justify-center">
-    <div class="bg-white p-4 rounded shadow">
-      {{ $dramas->links('vendor.pagination.tailwind') }}
-    </div>
+  <div class="flex justify-center p-4 rounded">
+    {{ $dramas->links('vendor.pagination.tailwind') }}
   </div>
 </body>
-
 </html>

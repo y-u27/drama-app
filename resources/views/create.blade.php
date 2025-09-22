@@ -9,7 +9,7 @@
   <title>投稿ページ</title>
 </head>
 
-<body class="bg-[#e9e4d4]">
+<body class="bg-gradient-to-l from-indigo-300 via-blue-200 to-sky-200">
   <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i>Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="px-130">
