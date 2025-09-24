@@ -26,7 +26,7 @@
   <div class="flex flex-row p-6 gap-8 justify-center">
     @foreach ($dramas as $drama )
     <div class="w-70 h-116 bg-white rounded-lg shadow-xl/20 overflow-hidden">
-      <div class="p-6">
+      <div class="p-5">
         <div class="flex items-center space-x-3">
           <!-- 編集ボタン -->
           <button type="submit" class="w-14 h-5 px-4 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300"><a href="{{ route('drama.edit', $drama->id ) }}">編集</a></button>
@@ -35,7 +35,7 @@
           <form action="{{ route('drama.destroy', $drama->id) }}" method="POST" onsubmit="return confirm('本当に削除しますか');">
             @csrf
             @method('DELETE')
-            <button type="submit" class="w-14 h-5 px-4 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300">削除</button>
+            <button type="submit" class="w-14 h-5 px-4 mb-1 bg-blue-400 text-white text-xs rounded-md hover:bg-red-300">削除</button>
           </form>
           <!-- ここまで -->
         </div>
@@ -52,4 +52,5 @@
     {{ $dramas->links('vendor.pagination.tailwind') }}
   </div>
 </body>
+
 </html>
