@@ -14,12 +14,12 @@
   <hr class="border-dashed">
   <div class="flex justify-between items-center px-6 pt-2">
     <ul class="flex px-3 space-x-6">
-      <li><a href="{{ route('drama.index') }}" class="px-5 bg-sky-500 hover:bg-sky-700 rounded-lg">All</a></li>
-      <li><a href="{{ route('drama.category', 'Japan') }}">Japan</a></li>
-      <li><a href="{{ route('drama.category', 'Korean') }}" class="px-5 bg-emerald-500 hover:bg-emerald-700 rounded-lg">Korean</a></li>
-      <li><a href="{{ route('drama.category', 'Thailand') }}">Thailand</a></li>
-      <li><a href="{{ route('drama.category', 'America') }}">America</a></li>
-      <li><a href="{{ route('drama.category', 'Other') }}">Other</a></li>
+      <li><a href="{{ route('drama.index') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#7B3CFF,#7B3CFF)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#7B3CFF]">All</a></li>
+      <li><a href="{{ route('drama.category', 'Japan') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#FF4F50,#FF4F50)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#FF4F50]">Japan</a></li>
+      <li><a href="{{ route('drama.category', 'Korean') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#FF8C00,#FF8C00)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#FF8C00]">Korean</a></li>
+      <li><a href="{{ route('drama.category', 'Thailand') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#4169e1,#4169e1)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#4169e1]">Thailand</a></li>
+      <li><a href="{{ route('drama.category', 'America') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#008b8b,#008b8b)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#008b8b]">America</a></li>
+      <li><a href="{{ route('drama.category', 'Other') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#33CCCC,#33CCCC)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#33CCCC]">Other</a></li>
     </ul>
     <a href="{{ route('drama.create') }}" class="px-4 py-1 rounded-lg bg-white">＋投稿</a>
   </div>
