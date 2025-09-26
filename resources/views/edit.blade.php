@@ -11,7 +11,7 @@
   <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i>Dramas Thought</h1>
   <hr class="border-dashed">
   <div class="px-130">
-    <form action="{{ route('drama.update', ['id' =>$drama->id]) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('drama.update', ['id' =>$drama->id]) }}" method="POST" enctype="multipart/form-data" class="my-5">
       @csrf
       @method("PUT")
       <select name="country" class="my-2 bg-white border-1 border-solid border rounded">
