@@ -21,7 +21,7 @@
       <li><a href="{{ route('drama.category', 'America') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#008b8b,#008b8b)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#008b8b]">America</a></li>
       <li><a href="{{ route('drama.category', 'Other') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#33CCCC,#33CCCC)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#33CCCC]">Other</a></li>
     </ul>
-    <a href="{{ route('drama.create') }}" class="px-4 py-1 rounded-lg bg-white">＋投稿</a>
+    <a href="{{ route('drama.create') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#043c78,#043c78)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#043c78]">＋投稿</a>
   </div>
   <div class="flex flex-row p-6 gap-8 justify-center">
     @foreach ($dramas as $drama )
