@@ -25,7 +25,7 @@
   </div>
   <div class="flex flex-row p-6 gap-8 justify-center">
     @foreach ($dramas as $drama )
-    <div class="w-70 h-116 bg-white rounded-lg shadow-xl/20 overflow-hidden">
+    <div class="w-70 h-116 bg-white rounded-lg shadow-xl/20 overflow-y-auto">
       <div class="p-5">
         <div class="flex items-center space-x-3">
           <!-- 編集ボタン -->
@@ -42,7 +42,7 @@
         <h2 class="text-lg font-bold mb-2">{{ $drama->title }} （{{ $drama->country }}）</h2>
         <p class="mb-4">{{ $drama->body }}</p>
         @if ($drama->image_path)
-        <img src="{{ asset('storage/' . $drama->image_path) }}" alt="画像" class="w-60 h-30 rounded">
+        <img src="{{ asset('storage/' . $drama->image_path) }}" alt="画像" class="w-60 h-70 rounded">
         @endif
       </div>
     </div>
