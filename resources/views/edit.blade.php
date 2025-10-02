@@ -15,16 +15,16 @@
       @csrf
       @method("PUT")
       <select name="country" class="my-2 bg-white border-1 border-solid border rounded">
-        <option value="Japan">Japan</option>
-        <option value="Korean">Korean</option>
-        <option value="Thailand">Thailand</option>
-        <option value="America">America</option>
-        <option value="Other">Other</option>
+        <option value="Japan" {{ old('country', $drama->country ?? '') === 'Japan' ? 'selected' : '' }}>Japan</option>
+        <option value="Korean" {{ old('country', $drama->country ?? '') === 'Korean' ? 'selected' : '' }}>Korean</option>
+        <option value="Thailand" {{ old('country', $drama->country ?? '') === 'Thailand' ? 'selected' : '' }}>Thailand</option>
+        <option value="America" {{ old('country', $drama->country ?? '') === 'America' ? 'selected' : '' }}>America</option>
+        <option value="Other" {{ old('country', $drama->country ?? '') === 'Other' ? 'selected' : '' }}>Other</option>
       </select>
       <div>
-        <input type="text" name="title" class="my-2 mb-4 border rounded bg-white" placeholder="タイトルを入力">
+        <input type="text" name="title" class="my-2 mb-4 border rounded bg-white" placeholder="タイトルを入力" value="{{ old('title', $drama->title) }}">
       </div>
-      <textarea name="body" id="" class="mb-4 border w-100 h-50 rounded bg-white" placeholder="感想を入力"></textarea>
+      <textarea name="body" id="" class="mb-4 border w-100 h-50 rounded bg-white" placeholder="感想を入力">{{ old('title', $drama->body) }}</textarea>
       <div>
         <input type="file" name="image" class="my-2 mb-4 w-100 h-30 border rounded bg-white">
       </div>
