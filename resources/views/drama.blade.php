@@ -24,7 +24,7 @@
     <a href="{{ route('drama.create') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#043c78,#043c78)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#043c78]">＋投稿</a>
   </div>
   <div class="flex flex-row p-6 gap-8 justify-center">
-    @foreach ($dramas as $drama )
+    @forelse ($dramas as $drama )
     <div class="w-70 h-116 bg-white rounded-lg shadow-xl/20 overflow-y-auto">
       <div class="p-5">
         <div class="flex items-center space-x-3">
@@ -46,7 +46,11 @@
         @endif
       </div>
     </div>
-    @endforeach
+    @empty
+    <div class="m-50">
+      <p class="text-center text-gray-600">投稿はまだありません</p>
+    </div>
+    @endforelse
   </div>
   <div class="flex justify-center p-4 rounded">
     {{ $dramas->links('vendor.pagination.tailwind') }}
