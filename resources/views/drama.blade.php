@@ -40,7 +40,7 @@
           <!-- ここまで -->
         </div>
         <h2 class="text-lg font-bold mb-2">{{ $drama->title }} （{{ $drama->country }}）</h2>
-        <p class="mb-4">{{ $drama->body }}</p>
+        <p class="mb-4">{!! nl2br(htmlspecialchars($drama->body)) !!}</p>
         @if ($drama->image_path)
         <img src="{{ asset('storage/' . $drama->image_path) }}" alt="画像" class="w-60 h-70 rounded">
         @endif
