@@ -11,9 +11,6 @@ class DramaController extends Controller
     // 一覧表示
     public function index()
     {
-        // $dramas = Drama::all();
-        // return view('drama', ['dramas' => $dramas]);
-
         $dramas = Drama::paginate(5);
         return view('drama', ['dramas' => $dramas]);
     }
