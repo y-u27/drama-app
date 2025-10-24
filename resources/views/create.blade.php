@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-gradient-to-l from-indigo-300 via-blue-200 to-sky-200">
-  <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i>Dramas Thought</h1>
+  <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i><a href="{{ route('drama.index') }}">Dramas Thought</a></h1>
   <hr class="border-dashed">
   <div class="px-130">
     <form action="{{ route('drama.store') }}" method="POST" enctype="multipart/form-data" class="my-5">
