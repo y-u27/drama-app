@@ -10,19 +10,33 @@
 </head>
 
 <body class="bg-gradient-to-l from-indigo-300 via-blue-200 to-sky-200">
+  <!-- アプリタイトル -->
   <h1 class="font-bold text-sky-700 text-xl mb-2 pl-3 pt-3"><i class="bi bi-file-earmark-slides-fill"></i><a href="{{ route('drama.index') }}">Dramas Thought</a></h1>
+  <!-- アプリタイトルの下線 -->
   <hr class="border-dashed">
+
+  <!-- カテゴリ機能 ここから -->
   <div class="flex justify-between items-center px-6 pt-2">
     <ul class="flex px-3 space-x-6">
+      <!-- カテゴリ：すべて -->
       <li><a href="{{ route('drama.index') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#7B3CFF,#7B3CFF)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#7B3CFF]">All</a></li>
+      <!-- カテゴリ：日本 -->
       <li><a href="{{ route('drama.category', 'Japan') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#FF4F50,#FF4F50)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#FF4F50]">Japan</a></li>
+      <!-- カテゴリ：韓国 -->
       <li><a href="{{ route('drama.category', 'Korean') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#FF8C00,#FF8C00)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#FF8C00]">Korean</a></li>
+      <!-- カテゴリ：タイ -->
       <li><a href="{{ route('drama.category', 'Thailand') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#4169e1,#4169e1)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#4169e1]">Thailand</a></li>
+      <!-- カテゴリ：アメリカ -->
       <li><a href="{{ route('drama.category', 'America') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#008b8b,#008b8b)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#008b8b]">America</a></li>
+      <!-- カテゴリ：その他 -->
       <li><a href="{{ route('drama.category', 'Other') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#33CCCC,#33CCCC)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#33CCCC]">Other</a></li>
     </ul>
+    <!-- 投稿作成ボタン -->
     <a href="{{ route('drama.create') }}" role="link" class="relative bg-[linear-gradient(#262626,#262626),linear-gradient(#043c78,#043c78)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat text-neutral-950 transition-[background-size,color] duration-500 hover:bg-[0_2px,100%_2px] hover:text-[#043c78]">＋投稿</a>
   </div>
+  <!-- ここまで -->
+
+  <!-- 投稿記事 ここから -->
   <div class="flex flex-row p-6 gap-8 justify-center">
     @forelse ($dramas as $drama )
     <div class="w-70 h-116 bg-white rounded-lg shadow-xl/20 overflow-y-auto">
@@ -52,9 +66,11 @@
     </div>
     @endforelse
   </div>
+  <!-- ここまで -->
+  
+  <!-- ページネーション -->
   <div class="flex justify-center p-4 rounded">
     {{ $dramas->links('vendor.pagination.tailwind') }}
   </div>
 </body>
-
 </html>
