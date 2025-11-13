@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\DramaController;
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
+
+//メインページ表示
+Route::get('/main', [MainController::class, 'index'])->name('main.index');
 
 // 投稿一覧表示/全てのカテゴリ表示
 Route::get('/drama', [DramaController::class, 'index'])->name('drama.index');

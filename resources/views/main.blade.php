@@ -8,7 +8,9 @@
     <title>メインページ</title>
 </head>
 <body class="bg-gradient-to-l from-indigo-300 via-blue-200 to-sky-200">
-    <div>ドラマの感想を書く！</div>
-    <div>ドラマカレンダー作成へ</div>
+    <div class="flex justify-center pt-80">
+        <div class="pr-80">ドラマの感想を書く！</div>
+        <div>ドラマカレンダー作成へ</div>
+    </div>
 </body>
 </html>
