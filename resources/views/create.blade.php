@@ -18,42 +18,44 @@
   <hr class="border-dashed">
 
   <!-- 投稿フォーム ここから -->
-  <div class="px-130">
-    <form action="{{ route('drama.store') }}" method="POST" enctype="multipart/form-data" class="my-5">
-      @csrf
-      <!-- 国カテゴリ選択 -->
-      <select name="country" class="my-2 bg-white border-1 border-solid border rounded">
-        <option value="Japan">Japan</option>
-        <option value="Korean">Korean</option>
-        <option value="Thailand">Thailand</option>
-        <option value="America">America</option>
-        <option value="Other">Other</option>
-      </select>
-      <!-- タイトル入力欄 -->
-      <div>
-        <input type="text" name="title" class="my-2 mb-4 border rounded bg-white" placeholder="タイトルを入力">
-      </div>
-      <!-- 感想入力欄 -->
-      <textarea name="body" id="" class="mb-4 border w-100 h-50 rounded bg-white" placeholder="感想を入力"></textarea>
-      <!-- <div id="quill_editor" class="mb-4 border w-100 h-50 rounded bg-white"></div>
-      <input type="hidden" name="body" id="hidden_body"> -->
-      <!-- 画像 -->
-      <div>
-        <input type="file" name="image" class="my-2 mb-4 w-100 h-30 border rounded bg-white">
-      </div>
-
-      <!-- 各ボタン機能 -->
-      <div class="flex">
-        <!-- 戻るボタン -->
-        <div class="px-1 py-3">
-          <button type="button" class="bg-white border-4 border-sky-700 w-30 h-15 px-10 py-2 rounded" onclick="history.back()">戻る</button>
+  <div class="px-130 py-8">
+    <div class="p-5 py-2 w-110 h-146 bg-white rounded shadow-2xl">
+      <form action="{{ route('drama.store') }}" method="POST" enctype="multipart/form-data" class="my-5">
+        @csrf
+        <!-- 国カテゴリ選択 -->
+        <select name="country" class="my-2 bg-white border-1 border-solid border rounded">
+          <option value="Japan">Japan</option>
+          <option value="Korean">Korean</option>
+          <option value="Thailand">Thailand</option>
+          <option value="America">America</option>
+          <option value="Other">Other</option>
+        </select>
+        <!-- タイトル入力欄 -->
+        <div>
+          <input type="text" name="title" class="my-2 mb-4 border rounded bg-white" placeholder="タイトルを入力">
         </div>
-        <!-- 投稿ボタン -->
-        <div class="px-38 py-3">
-          <button type="submit" class="bg-white border-4 border-sky-700 w-30 h-15 px-10 py-2 rounded">投稿</button>
+        <!-- 感想入力欄 -->
+        <textarea name="body" id="" class="mb-4 border w-100 h-50 rounded bg-white" placeholder="感想を入力"></textarea>
+        <!-- <div id="quill_editor" class="mb-4 border w-100 h-50 rounded bg-white"></div>
+        <input type="hidden" name="body" id="hidden_body"> -->
+        <!-- 画像 -->
+        <div>
+          <input type="file" name="image" class="my-2 mb-4 w-100 h-30 border rounded bg-white">
         </div>
-      </div>
-    </form>
+  
+        <!-- 各ボタン機能 -->
+        <div class="flex">
+          <!-- 戻るボタン -->
+          <div class="px-1 py-3">
+            <button type="button" class="bg-white border-4 border-sky-700 w-30 h-15 px-10 py-2 rounded" onclick="history.back()">戻る</button>
+          </div>
+          <!-- 投稿ボタン -->
+          <div class="px-38 py-3">
+            <button type="submit" class="bg-white border-4 border-sky-700 w-30 h-15 px-10 py-2 rounded">投稿</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
   <!-- ここまで -->
 <!-- <script>
