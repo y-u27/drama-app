@@ -17,7 +17,7 @@
             </a>
         </div>
         <div class="p-25 w-70 h-70 bg-white rounded">
-            ドラマカレンダー作成へ
+            <a href="{{ route('calendar.index') }}">ドラマカレンダー作成へ</a>
         </div>
     </div>
 </body>
