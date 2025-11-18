@@ -12,7 +12,9 @@
 <body class="bg-gradient-to-l from-indigo-300 via-blue-200 to-sky-200">
     <div class="flex space-x-10 justify-center pt-50">
         <div class="p-25 w-70 h-70 bg-white rounded">
-            ドラマの感想を書く！
+            <a href="{{ route('drama.index') }}">
+                ドラマの感想を書く！
+            </a>
         </div>
         <div class="p-25 w-70 h-70 bg-white rounded">
             ドラマカレンダー作成へ
