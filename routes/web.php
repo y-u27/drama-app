@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\DramaController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
@@ -26,3 +27,6 @@ Route::put('/drama/{id}', [DramaController::class, 'update'])->name('drama.updat
 
 // 投稿削除
 Route::delete('/drama/{id}', [DramaController::class, 'destroy'])->name('drama.destroy');
+
+//カレンダーページ表示
+Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar.index');
