@@ -20,7 +20,9 @@
 </script>
 
 <body class="bg-gradient-to-l from-indigo-300 via-blue-200 to-sky-200">
-  <div id='calendar' class="w-300 h-150 bg-white p-10"></div>
+  <div class="px-30 py-10">
+    <div id='calendar' class="w-300 h-150 p-10 border-2 border-emerald-400 border-solid bg-white rounded"></div>
+  </div>
   <a href="{{ route('main.index') }}">メインページへ戻る</a>
 </body>
 
