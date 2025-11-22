@@ -11,7 +11,7 @@
 
 <body class="bg-gradient-to-l from-indigo-300 via-blue-200 to-sky-200">
     <div class="flex space-x-10 justify-center pt-50">
-        <div class="p-25 w-70 h-70 bg-white rounded">
+        <div class="p-25 w-70 h-70 bg-white rounded group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-transparent px-6 font-medium text-neutral-600 transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)]">
             <a href="{{ route('drama.index') }}">
                 ドラマの感想を書く！
             </a>
