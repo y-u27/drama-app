@@ -10,4 +10,9 @@ class CalendarController extends Controller
     {
         return view('calendar');
     }
+
+    public function calenderRegister()
+    {
+        return view('calendarRegister');
+    }
 }

@@ -30,3 +30,6 @@ Route::delete('/drama/{id}', [DramaController::class, 'destroy'])->name('drama.d
 
 //カレンダーページ表示
 Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar.index');
+
+//カレンダー登録ページ表示
+Route::get('/calendar/calendarRegister',[CalendarController::class, 'calenderRegister'])->name('calenderRegister.create');
