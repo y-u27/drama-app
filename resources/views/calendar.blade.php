@@ -25,6 +25,7 @@
   </div>
   <div class="px-10 pb-3 text-lg">
     <a href="{{ route('main.index') }}">メインページへ戻る</a>
+    <a href="{{ route('calenderRegister.create') }}">登録</a>
   </div>
 </body>
 
