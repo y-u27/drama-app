@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Calendar extends Model
 {
     protected $fillable = [
-        'title'
+        'title',
+        'country',
+        'body',
     ];
 }
