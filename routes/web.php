@@ -33,3 +33,6 @@ Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar.in
 
 //カレンダー登録ページ表示
 Route::get('/calendar/calendarRegister',[CalendarController::class, 'calenderRegister'])->name('calenderRegister.create');
+
+// カレンダー登録
+Route::post('/calendar', [CalendarController::class, 'store'])->name('calendar.store');
