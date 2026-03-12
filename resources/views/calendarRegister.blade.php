@@ -18,6 +18,10 @@
         <div class="p-5 py-2 w-110 h-146 bg-white rounded shadow-2xl">
             <form action="{{ route('calenderRegister.create') }}" method="POST" enctype="multipart/form-data" class="my-5">
                 @csrf
+                <!-- 登録日選択 -->
+                <div>
+                    <input type="date">
+                </div>
                 <!-- 国カテゴリ選択 -->
                 <select name="country" class="my-2 bg-white border-1 border-solid border rounded">
                     <option value="Japan">Japan</option>
