@@ -16,11 +16,11 @@
     <!-- カレンダー登録フォーム ここから -->
     <div class="px-130 py-8">
         <div class="p-5 py-2 w-110 h-146 bg-white rounded shadow-2xl">
-            <form action="{{ route('calenderRegister.create') }}" method="POST" enctype="multipart/form-data" class="my-5">
+            <form action="{{ route('calendar.store') }}" method="POST" enctype="multipart/form-data" class="my-5">
                 @csrf
                 <!-- 登録日選択 -->
                 <div>
-                    <input type="date">
+                    <input type="date" name="start" class="border rounded px-2 py-1">
                 </div>
                 <!-- 国カテゴリ選択 -->
                 <select name="country" class="my-2 bg-white border-1 border-solid border rounded">
