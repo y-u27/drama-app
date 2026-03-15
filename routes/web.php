@@ -32,7 +32,7 @@ Route::delete('/drama/{id}', [DramaController::class, 'destroy'])->name('drama.d
 Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar.index');
 
 //カレンダー登録ページ表示
-Route::get('/calendar/calendarRegister',[CalendarController::class, 'calenderRegister'])->name('calenderRegister.create');
+Route::get('/calendar/calendarRegister',[CalendarController::class, 'calendarRegister'])->name('calendarRegister.create');
 
 // カレンダー登録
 Route::post('/calendar', [CalendarController::class, 'store'])->name('calendar.store');
