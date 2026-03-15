@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('calendar_register', function (Blueprint $table) {
             $table->id();
+            $table->date('start');
             $table->string('country');
             $table->text("title");
             $table->text("body");
