@@ -22,15 +22,33 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var calendarEl = document.getElementById('calendar');
-
       // PHP から渡された $events を JSON化
       var eventsData = JSON.parse(calendarEl.getAttribute('data-events'));
+
+      // --- 国ごとの色を定義 ---
+      const countryColors = {
+        'Japan': '#FF4F50',
+        'Korean': '#FF8C00',
+        'Thailand': '#4169e1',
+        'America': '#008b8b',
+        'Other':'#33CCCC',
+      }
+
+      // --- 各イベントに色を割り当てる ---
+      const coloredEvents = eventsData.map(event => {
+        return {
+          ...event,
+          backgroundColor: countryColors[event.country] || '#3788d8',
+          borderColor: countryColors[event.country] || '#3788d8'
+        }
+      })
 
       var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         locale: 'ja',
-        events: eventsData
+        events: coloredEvents,
       });
+      
       calendar.render();
     });
   </script>
